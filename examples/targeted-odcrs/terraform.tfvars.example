@@ -1,0 +1,11 @@
+region      = "eu-central-1"
+name_prefix = "capacity"
+
+capacity_reservation_ids = [
+  "cr-0123456789abcdef0",
+  "cr-0123456789abcdef1",
+]
+
+instance_types = ["m8id.16xlarge"]
+
+email_subscriptions = ["capacity-team@example.com"]

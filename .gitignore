@@ -1,0 +1,35 @@
+# Terraform state — may contain secrets, never commit
+*.tfstate
+*.tfstate.*
+.terraform/
+crash.log
+crash.*.log
+
+# Variable files may carry values specific to one account
+*.tfvars
+*.tfvars.json
+!examples/*/terraform.tfvars.example
+
+# Plan output
+tfplan
+*.tfplan
+
+# Local provider overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Lock files. This is a module: pinning a caller's provider versions is not ours to do, and
+# the example is a template rather than a deployment.
+.terraform.lock.hcl
+
+# ASH scan output. Only the output — .ash/ also holds any config, which is committed.
+.ash/ash_output/
+
+# OS and editor
+.DS_Store
+*.swp
+*~
